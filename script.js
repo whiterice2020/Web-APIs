@@ -36,15 +36,15 @@ function openingPage() {
     startText.textContent = "Welcome to the Quiz";
     startBtn.textContent = "Start Quiz";
     containerEl.appendChild(startText);
-    containerEl.appendChiuld(startBtn);
+    containerEl.appendChild(startBtn);
 }
 
 
-function startQuiz()(params) {
+// function startQuiz()(params) {
     
-}
+// }
 
-function showTimer()(params) {
+function showTimer() {
     timerDisplay.textContent = timer
 
     var timeInterval = setInterval(function () {
