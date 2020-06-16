@@ -1,7 +1,110 @@
 // Variables
+var questions = [
+{
+    title: "Example Question 1:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 2"
+},
+{
+    title: "Example Question 2:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 2"
+},
+{
+    title: "Example Question 3:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 2"
+},
+{
+    title: "Example Question 4:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 2"
+},
+]
+
+var containerEl = document.querySelector(".container");
+
+var timerDisplay = document.querySelector(".timer");
+var startText = document.createElement("h1");
+var startBtn = document.createElement("button");
+var questionText = document.createElement("p");
+var timer = 3;
+var index = 0;
 
 
+function openingPage() {
+    startText.textContent = "Welcome to the Quiz";
+    startBtn.textContent = "Start Quiz";
+    containerEl.appendChild(startText);
+    containerEl.appendChiuld(startBtn);
+}
 
+
+function startQuiz()(params) {
+    
+}
+
+function showTimer()(params) {
+    timerDisplay.textContent = timer
+
+    var timeInterval = setInterval(function () {
+        timer--;
+        timerDisplay.textContent = timer
+        if (timer === 0){
+            clearInterval(timeInterval)
+        }
+
+
+    }, 1000);
+
+
+}
+
+function nextQuestion() {
+    
+    var currentQuestion = questions[index];
+
+    containerEl.textContent = "";
+
+questionText.textContent = currentQuestion.title;
+containerEl.appendChild(questionText);
+
+var answersDiv = document.createElement("div");
+
+for (let i= 0; i < currentQuestion.choices.length; i++){
+    var answerBtn = document.createElement("button");
+    answerBtn.classList.add("choiceBtn");
+    answerBtn.textContent = currentQuestion.choices[i];
+    answersDiv.appendChild(answerBtn);
+
+}
+
+    containerEl.appendChild(answersDiv);
+}
+
+function startQuiz() {
+    
+    showTimer()
+
+    nextQuestion()
+}
+
+function checkAnswer(event){
+    if(event.target.matches(".choiceBtn"))
+
+    index++;
+    nextQuestion();
+
+}
+
+startBtn.addEventListener("click", function (event) {
+    
+})
+
+startBtn.addEventListener("click", startQuiz);
+document.addEventListener("click", checkAnswer);
+
+openingPage()
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
 
@@ -13,6 +116,12 @@
 
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
+
+
+
+
+
+
 
 
 // WHEN all questions are answered or the timer reaches 0
