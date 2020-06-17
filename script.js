@@ -1,24 +1,54 @@
 // Variables
 var questions = [
 {
-    title: "Example Question 1:",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 2"
+    title: "This is Question 4 :",
+    choices: ["what is pizza made out of", "Why is the sky blue?", "what year was i born", "what school are you in"],
+    answer: "Choice 4"
 },
 {
-    title: "Example Question 2:",
+    title: "This is Question 2 answer is 4:",
     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 2"
+    answer: "Choice 4"
 },
 {
-    title: "Example Question 3:",
+    title: "This is Question 3 answer is 4:",
     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 2"
+    answer: "Choice 4"
 },
 {
-    title: "Example Question 4:",
+    title: "This is Question 4 answer is 4:",
     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 2"
+    answer: "Choice 4"
+},
+{
+    title: "This is Question 4 answer is 4:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 4"
+},
+{
+    title: "This is Question 4 answer is 4:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 4"
+},
+{
+    title: "This is Question 4 answer is 4:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 4"
+},
+{
+    title: "This is Question 4 answer is 4:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 4"
+},
+{
+    title: "This is Question 4 answer is 4:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 4"
+},
+{
+    title: "This is Question 4 answer is 4:",
+    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
+    answer: "Choice 4"
 },
 ]
 
@@ -28,6 +58,8 @@ var timerDisplay = document.querySelector(".timer");
 var startText = document.createElement("h1");
 var startBtn = document.createElement("button");
 var questionText = document.createElement("p");
+// var resultsDiv = document.querySelector("results");
+var score = 0;
 var timer = 3;
 var index = 0;
 
@@ -52,10 +84,11 @@ function showTimer() {
         timerDisplay.textContent = timer
         if (timer === 0){
             clearInterval(timeInterval)
+            window.location.href = "./highScores.html";
         }
 
 
-    }, 1000);
+    }, 500);
 
 
 }
@@ -91,7 +124,7 @@ function startQuiz() {
 
 function checkAnswer(event){
     if(event.target.matches(".choiceBtn"))
-
+    // score ++;
     index++;
     nextQuestion();
 
