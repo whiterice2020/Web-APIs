@@ -58,9 +58,13 @@ var timerDisplay = document.querySelector(".timer");
 var startText = document.createElement("h1");
 var startBtn = document.createElement("button");
 var questionText = document.createElement("p");
+// Variables for Highscores page
+// var scoresH1El = document.createElement(".done");
+// var initialsBoxEl = document.createElement(".initialsDiv");
+// // var finalScoreEl = document.createElement(".");
 // var resultsDiv = document.querySelector("results");
 var score = 0;
-var timer = 3;
+var timer = 500;
 var index = 0;
 
 
@@ -71,10 +75,8 @@ function openingPage() {
     containerEl.appendChild(startBtn);
 }
 
+ 
 
-// function startQuiz()(params) {
-    
-// }
 
 function showTimer() {
     timerDisplay.textContent = timer
@@ -85,6 +87,7 @@ function showTimer() {
         if (timer === 0){
             clearInterval(timeInterval)
             window.location.href = "./highScores.html";
+            
         }
 
 
@@ -124,8 +127,12 @@ function startQuiz() {
 
 function checkAnswer(event){
     if(event.target.matches(".choiceBtn"))
-    // score ++;
+    score ++;
     index++;
+    
+    // Add the bottom part of correct or wrong
+    // another if statement
+    // maybe a span to display right or wrong
     nextQuestion();
 
 }
