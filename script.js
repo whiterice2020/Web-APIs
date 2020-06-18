@@ -1,34 +1,34 @@
 // Variables
 var questions = [
 {
-    title: "This is Question 4 :",
-    choices: ["what is pizza made out of", "Why is the sky blue?", "what year was i born", "what school are you in"],
-    answer: "Choice 4"
+    title: "How do you create a variable :",
+    choices: ["function", "array", "var", "none of the above"],
+    answer: "var"
 },
 {
-    title: "This is Question 2 answer is 4:",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 4"
+    title: "What is the beginning index number of an array:",
+    choices: ["1", "0", "2", "3"],
+    answer: "0"
 },
 {
-    title: "This is Question 3 answer is 4:",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 4"
+    title: "Who invented JavaScript? :",
+    choices: ["Albert Einstien", "Bob Marley", "Douglas Crockford", "Brendan Eich"],
+    answer: "Brendan Eich"
 },
 {
-    title: "This is Question 4 answer is 4:",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 4"
+    title: "Can a function not contain a parameter:",
+    choices: ["Yes", "No"],
+    answer: "Yes"
 },
 {
-    title: "This is Question 4 answer is 4:",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 4"
+    title: "What is the name of this function - function divide (Param1, Param2){}:",
+    choices: ["Function", "Param1", "Param2", "Divide"],
+    answer: "Divide"
 },
 {
-    title: "This is Question 4 answer is 4:",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-    answer: "Choice 4"
+    title: "Where is the correct place to insert a Javascript:",
+    choices: ["<HTML>", "<Header>", "<BODY>", "<Footer>"],
+    answer: "<BODY>"
 },
 {
     title: "This is Question 4 answer is 4:",
@@ -62,7 +62,7 @@ var questionText = document.createElement("p");
 // var scoresH1El = document.createElement(".done");
 // var initialsBoxEl = document.createElement(".initialsDiv");
 // // var finalScoreEl = document.createElement(".");
-// var resultsDiv = document.querySelector("results");
+var resultsDiv = document.querySelector("results");
 var score = 0;
 var timer = 500;
 var index = 0;
@@ -129,7 +129,8 @@ function checkAnswer(event){
     if(event.target.matches(".choiceBtn"))
     score ++;
     index++;
-    
+    // resultsDiv.textContent="abdsdalkfja";
+    // containerEl.appendChild(resultsDiv);
     // Add the bottom part of correct or wrong
     // another if statement
     // maybe a span to display right or wrong
