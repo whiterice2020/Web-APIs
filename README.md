@@ -15,4 +15,4 @@ Each array has objects which 2 are strings and 1 is another array
 
 There is a function which calls the questions
 
-
+![Image of Questions Array] (https://github.com/whiterice2020/Web-APIs/tree/master/Assets/readme.jpg)
